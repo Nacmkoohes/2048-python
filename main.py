@@ -1,3 +1,5 @@
+print(">>> RUNNING FILE:", __file__)
+
 import numpy as np
 import random
 import pygame
