@@ -12,6 +12,9 @@ This project replicates the classic sliding tile game, playable directly in the 
 - Lightweight and beginner-friendly codebase  
 
 ---
+## 📸 Demo
+![2048 Gameplay](assets/screenshot.png)
+
 
 ## 🚀 Getting Started
 
