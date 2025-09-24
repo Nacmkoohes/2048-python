@@ -2,7 +2,7 @@ import numpy as np
 import random
 import pygame
 from pygame.locals import *
-from constants import TEST_GRID, CP
+from constants import TEST_GRID, CP  
 
 
 n = 4
@@ -33,7 +33,7 @@ class GridOFGame():
     def new_num(self, n):
         poss = list(zip(*np.where(self.grid == 0)))
 
-        for pos in random.sample(poss, k = n):
+        for pos in random.sample(poss, k=n):
             if random.random() < 0.1:
                 self.grid[pos] = 4
             else:
@@ -63,7 +63,7 @@ class GridOFGame():
                 new_row = np.zeros(n)
                 just_number = row[row != 0]
                 just_number = self.check_for_sum(just_number)
-                new_row[0 : len(just_number)] = just_number
+                new_row[0:len(just_number)] = just_number
                 self.grid[i] = new_row
         elif way == 'R':
             for i in range(n):
@@ -71,7 +71,7 @@ class GridOFGame():
                 new_row = np.zeros(n)
                 just_number = row[row != 0]
                 just_number = self.check_for_sum(just_number[::-1])[::-1]
-                new_row[n - len(just_number) : n] = just_number
+                new_row[n - len(just_number):n] = just_number
                 self.grid[i] = new_row
         elif way == 'U':
             for i in range(n):
@@ -79,7 +79,7 @@ class GridOFGame():
                 new_col = np.zeros(n)
                 just_number = col[col != 0]
                 just_number = self.check_for_sum(just_number)
-                new_col[0 : len(just_number)] = just_number
+                new_col[0:len(just_number)] = just_number
                 self.grid[:, i] = new_col
         elif way == 'D':
             for i in range(n):
@@ -87,7 +87,7 @@ class GridOFGame():
                 new_col = np.zeros(n)
                 just_number = col[col != 0]
                 just_number = self.check_for_sum(just_number[::-1])[::-1]
-                new_col[n - len(just_number) : n] = just_number
+                new_col[n - len(just_number):n] = just_number
                 self.grid[:, i] = new_col
     
     def score_board(self):
