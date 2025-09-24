@@ -6,6 +6,9 @@ from constants import TEST_GRID, CP
 
 
 n = 4
+import os
+print(">>> Running file:", __file__)
+print(">>> Current working dir:", os.getcwd())
 
 
 class GridOFGame():
