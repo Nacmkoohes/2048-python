@@ -2,7 +2,8 @@ import numpy as np
 import random
 import pygame
 from pygame.locals import *
-from const import TEST_GRID, CP
+from constants import TEST_GRID, CP
+
 
 n = 4
 
